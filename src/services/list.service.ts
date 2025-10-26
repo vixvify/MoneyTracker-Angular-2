@@ -22,4 +22,12 @@ export class ListService {
   deleteData(name: String): Observable<any> {
     return this.http.delete(`${this.apiUrl}/deleteItem/${name}`);
   }
+
+  getSingle(name: String): Observable<any> {
+    return this.http.get(`${this.apiUrl}/getSingle/${name}`);
+  }
+
+  updateItem(name: String, data: List): Observable<any> {
+    return this.http.patch(`${this.apiUrl}/updateData/${name}`, data);
+  }
 }

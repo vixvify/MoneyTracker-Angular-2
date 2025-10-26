@@ -5,10 +5,11 @@ import { effect } from '@angular/core';
 import { Calservice } from '../../services/cal.service';
 import { Money } from '../../types/money';
 import Swal from 'sweetalert2';
+import { RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [RouterLinkWithHref],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

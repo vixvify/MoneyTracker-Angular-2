@@ -1,6 +1,6 @@
 <div class="mt-20 flex flex-col justify-center items-center">
-  <h1 class="text-5xl text-center">บันทึกรายการ</h1>
-  <form class="mt-10 flex flex-col gap-3" (ngSubmit)="sendData()">
+  <h1 class="text-5xl text-center">แก้ไขรายการ</h1>
+  <form class="mt-10 flex flex-col gap-3" (ngSubmit)="updateData()">
     <p class="text-xl">ชื่อรายการ</p>
     <input
       type="text"
@@ -24,11 +24,7 @@
       <option>รายรับ</option>
       <option>รายจ่าย</option>
     </select>
-    <button
-      class="bg-black text-white p-3 rounded-md mt-5 text-xl cursor-pointer disabled:opacity-50"
-      type="submit"
-      [disabled]="!canSend()"
-    >
+    <button class="bg-black text-white p-3 rounded-md mt-5 text-xl cursor-pointer" type="submit">
       บันทึกรายการ
     </button>
   </form>
